@@ -66,7 +66,7 @@ app.post("/doces", (req, res) => {
         preco: preco,
     }
     guloseimas.push(novoDoce)
-    return res.status(200).send(guloseimas)
+    return res.status(201).send(guloseimas)
 })
 
 app.get("/filmes", (req, res) => {
