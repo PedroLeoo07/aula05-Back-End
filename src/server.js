@@ -54,11 +54,23 @@ app.get("/", (req, res) => {
 })
 
 app.get("/doces", (req, res) => {
-    return res.status(200).send(guloseimas);
+    return res.status(200).send(guloseimas)
+})
+
+app.post("/doces", (req, res) => {
+    const {nome,preco} = req.body
+
+    const novoDoce = {
+        id: guloseimas.length + 1,
+        nome: nome,
+        preco: preco,
+    }
+    guloseimas.push(novoDoce)
+    return res.status(200).send(guloseimas)
 })
 
 app.get("/filmes", (req, res) => {
-    return res.status(200).send(filmesMarcantes);
+    return res.status(200).send(filmesMarcantes)
 })
 
 app.post("/ ", (req, res) => {''
