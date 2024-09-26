@@ -2,9 +2,12 @@ import { Router } from "express"
 
 import docesRoutes from "./doces.routes.js"
 
+import filmesRoutes from "./filmes.routes.js"
+
 const routes = Router()
 
 routes.use("/doces", docesRoutes)
+routes.use("/filmes", filmesRoutes)
 
 
 
